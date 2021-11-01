@@ -18,7 +18,7 @@ void loop() {
   //Also if there was a transition
   if ((val == HIGH) && (old_val == LOW)){
     state = 1 - state;       // (1 - 1 = 0) OFF | (1 - 0 = 1) ON
-    delay(10);               //To prevent BOUNCING from the pushbutton
+    delay(50);               //To prevent BOUNCING from the pushbutton
   }
 
   old_val = val;             //"val" is now the old value, store it.
@@ -32,7 +32,7 @@ void loop() {
 }
 
 //Momentary Tactile pushBUTTON Switch in solderless BREADBOARD, Pins: e22 e20 f22 f20
-//Cable 1 in pin f22 connected to 5v in Arduino
-//Cable 2 in pin f20 connected to 7 in Arduino
+//Cable 1 in pin g22 connected to 5v in Arduino
+//Cable 2 in pin g20 connected to 7 in Arduino
 //Cable 3 in pin h14 connected to GND (Ground) *IMPORTANT*
 //10K Ohm Resistor in pins g20 and g14

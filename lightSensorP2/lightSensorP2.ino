@@ -15,7 +15,8 @@ void loop() {
   val = analogRead(0);                      // Read the value from the sensor
 
   analogWrite(LED, val/4);                  // Turn the LED ON at the brightest set by the sensor
-
+                                            // divided by 4 because analogRead() returns values up to 1023
+                                            // and analogWrite() accepts a maximum of 255    
   delay(10);                                // Stop the program for some time
 }
 
